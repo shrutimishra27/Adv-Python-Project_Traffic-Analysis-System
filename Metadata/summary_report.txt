@@ -1,0 +1,5 @@
+Summary Report (2023-08-25 06:11:28):
+Number of .jpg files: 28
+Number of .txt files: 28
+Total size of images: 2956146 bytes
+Total size of txt files: 6014 bytes
