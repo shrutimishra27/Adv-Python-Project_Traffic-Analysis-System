@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Traffic Analysis Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Your CSS file -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&family=Didact+Gothic&family=Merriweather&family=Pacifico&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <header>
+        <h1><a href="#">Surakshaa</a></h1>
+        <ul class="nav">
+            <li><a href="#" class="hover-link">Upload Video</a></li>
+            <li><a href="#" class="hover-link">Blog</a></li>
+            <li><a href="#" class="hover-link">Chatbot</a></li>
+            <li><a href="#" class="hover-link">Dataset</a></li> 
+        </ul>
+    </header>
+    <div> 
+
+    <!-- <section id="login">
+        <div class="video-container">
+            <video id="backgroundVideo" autoplay muted loop>
+                <source src="traffic_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="container">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+                <div id="loginMessage" class="hidden"></div>
+            </div>
+        </div>
+    </section></div> -->
+
+    <section class="box">
+        
+        <video src="traffic_video.mp4" autoplay muted loop></video>
+    
+        <h1>Login Portal</h1>
+    
+    <div class="items"> 
+        <form id="loginForm" class="cont">
+            <div class="text-form">
+                <label for="username" class="centered-text2" >Username:</label>
+                <input type="text" id="username" name="username" size="30" class="centered-text" required>
+            </div>
+            <div class="text-form">
+                <label for="password" class="centered-text2">Password:</label>
+                <input type="password" id="password" name="password" size="30" class="centered-text" required>
+            </div>
+            <br>
+            <br>
+            <div class="text-forms">
+                <button type="submit" class="centered-text hover-link" style="background-color: rgb(95, 95, 124);" >Submit</button>
+            </div>
+        </form>
+    </div>
+
+        <div id="loginMessage" class="hidden"></div>
+    </div>
+
+    
+
+    </section>
+
+
+
+
+    <footer>
+        <div class="container">
+            
+        </div>
+    </footer>
+
+    <script src="script.js"></script> <!-- Your JavaScript file -->
+</body>
+</html>
