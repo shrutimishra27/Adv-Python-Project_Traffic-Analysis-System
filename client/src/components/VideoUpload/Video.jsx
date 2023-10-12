@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Video.css";
+import video from "./detected_video.mp4"
 
 const Video = () => {
   const [uploading, setUploading] = useState(false);
@@ -24,9 +25,9 @@ const Video = () => {
   }, [showPopup]);
 
   return (
-    <div className="container">
+    <div className="vcontainer">
       {uploading ? (
-        <p className="uploading-message">Uploading video...</p>
+        <p className="uploading-message">Uploading and Detecting Video...</p>
       ) : (
         <div className="video-uploader">
           <input
@@ -41,7 +42,7 @@ const Video = () => {
       {showPopup && (
         <div className="popup">
           <video controls>
-            <source src="URL_TO_YOUR_SECOND_VIDEO.mp4" type="video/mp4" />
+            <source src={video} type="video/mp4" className="detected" />
             Your browser does not support the video tag.
           </video>
           <button onClick={closePopup}>Close</button>
