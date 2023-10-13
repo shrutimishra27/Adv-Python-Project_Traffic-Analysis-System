@@ -19,6 +19,7 @@
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 0;
 }
 
 .center {
@@ -74,13 +75,36 @@
 }
 
 .box{
-    background-image: url('https://static.vecteezy.com/system/resources/previews/020/436/120/non_2x/chatbot-ai-artificial-intelligence-technology-hitech-concept-chatbot-application-smart-bot-open-ai-line-technology-abstract-design-for-chatting-web-banner-background-transformation-vector.jpg');
+    /* background-image: url('https://static.vecteezy.com/system/resources/previews/020/436/120/non_2x/chatbot-ai-artificial-intelligence-technology-hitech-concept-chatbot-application-smart-bot-open-ai-line-technology-abstract-design-for-chatting-web-banner-background-transformation-vector.jpg'); */
+    background-image: url(https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1697068800&semt=sph);
     background-color: rgba(255, 255, 255, 0.5);
     /* justify-content: center; */
     /* align-items: center; */
-    background-repeat: initial;
-    background-size: widthValue auto;
+
+    background-repeat: none;
+    background-size: cover;
     height: 1000px;
+}
+
+.cheading{
+    color: aliceblue;
+    font-size: 80px;
+    text-align: center;
+}
+p{
+    color: aliceblue;
+}
+
+#send-button{
+    /* display: block; */
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 
@@ -88,7 +112,7 @@
 </head>
 <body>
     <section class="box">
-    <h1 class="heading">Chatbot</h1>
+    <h1 class="cheading">Chatbot</h1>
     <div class="center" id="chat-container">
         <p>Welcome to the chatbot!</p>
             <p>  You can ask questions.</p>
@@ -96,6 +120,7 @@
     <br>
     <div class="display"> 
     <input type="text" id="user-input" class="search1" placeholder="Type a message...">
+    <br><br>
     <button id="send-button" class="search2">Send</button>
 </div>
 </section>
