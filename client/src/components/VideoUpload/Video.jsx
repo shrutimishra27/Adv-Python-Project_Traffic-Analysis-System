@@ -25,6 +25,9 @@ const Video = () => {
   }, [showPopup]);
 
   return (
+    <>
+    
+    <h1 style={{ textTransform: 'uppercase', marginTop:'10px'}}>Get a Detected Video </h1>
     <div className="vcontainer">
       {uploading ? (
         <p className="uploading-message">Uploading and Detecting Video...</p>
@@ -36,6 +39,13 @@ const Video = () => {
             onChange={handleUpload}
             id="fileInput"
           />
+          <h2>Upload a Video</h2>
+          <h3>And get Detected Video</h3>
+          <br />
+          <img className="v-image" src="https://copyassignment.com/wp-content/uploads/2022/06/Violation_Detection_Frame-1024x602.jpg" alt="" />
+          <br />
+          <br />
+          <br />
           <label htmlFor="fileInput">Upload Video</label>
         </div>
       )}
@@ -49,6 +59,7 @@ const Video = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 export default Video;
