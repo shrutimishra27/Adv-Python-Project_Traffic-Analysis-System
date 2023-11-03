@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detected Video</title>
+    <link rel="stylesheet" href="Video.css" />
+  </head>
+  <body>
+    <h1 style="text-transform: uppercase; margin-top: 10px; text-align: center">
+      Get a Detected Video
+    </h1>
+    <br />
+    <div class="vcontainer">
+      <p id="uploadingMessage" class="uploading-message">
+        Uploading and Detecting Video...
+      </p>
+      <div class="video-uploader">
+        <input type="file" accept="video/*" id="fileInput" />
+        <h2>Upload a Video</h2>
+        <h3>And get Detected Video</h3>
+        <br />
+        <img
+          class="v-image"
+          src="https://copyassignment.com/wp-content/uploads/2022/06/Violation_Detection_Frame-1024x602.jpg"
+          alt=""
+        />
+        <br />
+        <br />
+        <br />
+        <label for="fileInput">Upload Video</label>
+      </div>
+      <div id="popup" class="popup" style="display: none">
+        <video controls>
+          <source
+            src="detected_video.mp4"
+            id="videoSource"
+            type="video/mp4"
+            class="detected"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="button-container">
+          <button id="closeButton">Close</button>
+          <button id="downloadButton">Download</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="video.js"></script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Example</title>
+    <style>
+        /* #chat-container {
+            width: 70%;
+            height: 400px;
+            border: 1px solid #ccc;
+            overflow: auto;
+            align-items: center;
+            text-align: center;
+
+            /* padding-left: 20%; */
+        /* } */ */
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+#chat-container {
+    width: 600px;
+    height: 400px;
+    border: 1px solid #ccc;
+    overflow: auto;
+    margin: 0 auto;
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(7, 57, 72);
+    
+}
+
+.search1{
+    
+    text-align: center;
+    width: 400px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    
+}
+.search2{
+    
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    justify-content: center;
+    align-items: center; 
+    display: flex; 
+}
+
+.display{
+    display: flex;
+    justify-content: center;
+}
+
+.heading{
+    text-decoration: underline ;
+    color : black;
+    font-size: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.box{
+    /* background-image: url('https://static.vecteezy.com/system/resources/previews/020/436/120/non_2x/chatbot-ai-artificial-intelligence-technology-hitech-concept-chatbot-application-smart-bot-open-ai-line-technology-abstract-design-for-chatting-web-banner-background-transformation-vector.jpg'); */
+    background-image: url(https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1697068800&semt=sph);
+    background-color: rgba(255, 255, 255, 0.5);
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    background-repeat: none;
+    background-size: cover;
+    height: 1000px;
+}
+
+.cheading{
+    color: aliceblue;
+    font-size: 80px;
+    text-align: center;
+}
+p{
+    color: aliceblue;
+}
+
+#send-button{
+    /* display: block; */
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+    </style>
+</head>
+<body>
+    <section class="box">
+    <h1 class="cheading">Chatbot</h1>
+    <div class="center" id="chat-container">
+        <p>Welcome to the chatbot!</p>
+            <p>  You can ask questions.</p>
+    </div>
+    <br>
+    <div class="display"> 
+    <input type="text" id="user-input" class="search1" placeholder="Type a message...">
+    <br><br>
+    <button id="send-button" class="search2">Send</button>
+</div>
+</section>
+    <script>
+        const chatContainer = document.getElementById("chat-container");
+        const userInput = document.getElementById("user-input");
+        const sendButton = document.getElementById("send-button");
+
+        sendButton.addEventListener("click", function() {
+            const userMessage = userInput.value;
+            appendMessage("You: " + userMessage);
+            userInput.value = "";
+
+            // Handle different cases and provide responses
+            const lowerCaseMessage = userMessage.toLowerCase();
+            switch (lowerCaseMessage) {
+                case "hello":
+                case "hi":
+                    respond("Hello there!");
+                    break;
+                case "how are you?":
+                    respond("I'm just a chatbot, but thanks for asking!");
+                    break;
+                case "What are the common traffic violations?":
+                    respond("Common traffic violations include speeding, running red lights, and not wearing helmets and seatbelts");
+                case "What should I do if I witness a road accident?":
+                    respond("If you witness an accident, call emergency services immediately and provide assistance if it's safe to do so.");
+                case "Why is wearing a helmet important for motorcycle riders?":
+                    respond("Helmets protect against head injuries in the event of a motorcycle accident, significantly reducing the risk of severe injury.");
+                case "What should I look for when buying a motorcycle helmet?":
+                    respond("When buying a helmet, look for certifications like DOT, ECE, or Snell, and ensure it fits snugly and comfortably.");
+                case " Are there different types of helmets for various activities?":
+                    respond("Yes, different helmets are designed for motorcycles, bicycles, and other activities to provide appropriate protection.");
+                case "What are the common mistakes people make with helmet use?":
+                    respond(" Common mistakes include not fastening straps properly, wearing helmets too loosely, or using damaged helmets.");
+                case "Do helmet laws vary by location?":
+                    respond("Yes, helmet laws vary by state or country, so it's essential to know and follow local regulations.");
+                case "Can I use a bicycle helmet for other activities like skateboarding or scootering?":
+                    respond("It's best to use helmets designed specifically for the activity you're engaged in, as they are optimized for different types of impacts.");
+
+
+                default:
+                    respond("I'm sorry, I don't understand that question.");
+            }
+        });
+
+        function respond(message) {
+            setTimeout(function() {
+                appendMessage("Chatbot: " + message);
+            }, 500);
+        }
+
+        function appendMessage(message) {
+            const p = document.createElement("p");
+            p.textContent = message;
+            chatContainer.appendChild(p);
+        }
+    </script>
+</body>
+</html>

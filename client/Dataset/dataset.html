@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="DataSet.css" />
+    <title>Data Set Download Page</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Data Set Download Page</h1>
+    <div class="card-container">
+      <!-- Card components will be inserted here using JavaScript -->
+    </div>
+
+    <script>
+      function handleDownload(driveLink, title) {
+        const a = document.createElement("a");
+        a.href = driveLink;
+        a.download = `${title}.zip`;
+        a.click();
+      }
+
+      const cardData = [
+        {
+          title: "Helmet Violation",
+          driveLink:
+            "https://drive.google.com/drive/folders/1s-7t2mbCu1bh413IPuZ8QfC-mu2dnuGh?usp=sharing",
+          img: "../images/helmet1.png",
+        },
+        {
+          title: "Triple Riding Violation",
+          driveLink:
+            "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_2",
+          img: "../images/tripling.png",
+        },
+        {
+          title: "Mobile Phone Usage Violation",
+          driveLink:
+            "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_3",
+          img: "../images/mobile.png",
+        },
+        {
+          title: "Seat Belt Violation",
+          driveLink:
+            "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_4",
+          img: "../images/seatbelt.jpg",
+        },
+        {
+          title: "Passenger without Helmet Violation",
+          driveLink:
+            "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_5",
+          img: "../images/passenger.png",
+        },
+        {
+          title: "No-License Violation",
+          driveLink:
+            "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID_6",
+          img: "./images/way.png",
+        },
+      ];
+
+      const cardContainer = document.querySelector(".card-container");
+
+      cardData.forEach((card, index) => {
+        const cardElement = document.createElement("div");
+        cardElement.className = "card";
+
+        cardElement.innerHTML = `
+                <h2>${card.title}</h2>
+                <img src="${card.img}" alt="Image" /><br>
+                <button onclick="handleDownload('${card.driveLink}', '${card.title}')">Download</button>
+            `;
+
+        cardContainer.appendChild(cardElement);
+      });
+    </script>
+  </body>
+</html>
