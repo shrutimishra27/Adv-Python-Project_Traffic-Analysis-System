@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Analysis Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: radial-gradient(circle at 10% 20%, rgb(164, 38, 199) 0.1%, rgb(65, 220, 255) 90.1%);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        #container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart {
+            display: inline-block;
+            width: 45%;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .graph {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Traffic Analysis</h1>
+    </header>
+
+    <div id="container">
+        <h2>Traffic Violation Data</h2>
+        <div class="chart">
+            <h3>Violation Types</h3>
+            <canvas id="violationTypesChart" width="200" height="200"></canvas>
+        </div>
+
+        <div class="chart">
+            <h3>Severity of Violation</h3>
+            <canvas id="severityChart" width="200" height="200"></canvas>
+        </div>
+
+        <div class="graph">
+            <h2>Road Safety Trends</h2>
+            <canvas id="roadSafetyTrendsChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Sample data for pie charts
+        const violationTypesData = {
+            labels: ['Speeding', 'Red Light Violation', 'Distracted Driving'],
+            datasets: [{
+                data: [30, 20, 10],
+                backgroundColor: ['red', 'orange', 'blue'],
+            }]
+        };
+    
+        const severityData = {
+            labels: ['Minor', 'Major', 'Fatal'],
+            datasets: [{
+                data: [60, 25, 15],
+                backgroundColor: ['green', 'yellow', 'red'],
+            }]
+        };
+    
+        // Sample data for the line graph
+        const roadSafetyTrendsData = {
+            labels: ['2020', '2021', '2022', '2023'],
+            datasets: [{
+                label: 'Accidents',
+                data: [400, 350, 300, 275],
+                borderColor: 'blue',
+                fill: false,
+            }]
+        };
+    
+        // Get the chart elements by their IDs and create the charts
+        const violationTypesChart = new Chart(document.getElementById('violationTypesChart'), {
+            type: 'pie',
+            data: violationTypesData,
+        });
+    
+        const severityChart = new Chart(document.getElementById('severityChart'), {
+            type: 'pie',
+            data: severityData,
+        });
+    
+        const roadSafetyTrendsChart = new Chart(document.getElementById('roadSafetyTrendsChart'), {
+            type: 'line',
+            data: roadSafetyTrendsData,
+        });
+    </script>    
+</body>
+</html>

@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "react": "^18.2.0",
+<<<<<<< HEAD
     "react-bootstrap": "^2.9.0",
+=======
+>>>>>>> 348a26b3cbe3943673631e90c5a2df02c5778566
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0"
   },
