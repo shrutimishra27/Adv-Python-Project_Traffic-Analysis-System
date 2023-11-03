@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
 	--main: #7b4ee4 ;
 	--darkblue: #362078;
@@ -188,4 +189,44 @@ footer{
 footer p{
 	color: var(--white);
 	text-align: center;
+=======
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #c8c8c8;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.alert-danger {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ff4444;
+    background-color: #ffeeee;
+    color: #ff4444;
+}
+.custom-alert-success {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0cad17;
+    background-color: #ffeeee;
+    color: #f2f1f1;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0ad4e; /* Warning color in Bootstrap */
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #eea236; /* Border color for warning in Bootstrap */
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #eea236; /* Button color on hover in Bootstrap */
+>>>>>>> 348a26b3cbe3943673631e90c5a2df02c5778566
 }
